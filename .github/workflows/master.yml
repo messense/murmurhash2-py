@@ -41,3 +41,8 @@ jobs:
 
       - name: Install wheel
         run: pip install murmurhash2 --no-index --find-links wheels
+
+      - name: Python UnitTest
+        run: |
+          pip install pytest
+          pytest -v tests/

@@ -45,7 +45,11 @@ fn murmurhash2_impl(key: &[u8], seed: u32) -> u32 {
 
 #[pymodule]
 fn murmurhash2(_py: Python, m: &PyModule) -> PyResult<()> {
-
+    /// murmurhash2 hash function
+    ///
+    /// Arguments
+    /// key: data to be hashed
+    /// seed: hash seed
     #[pyfn(m, "murmurhash2")]
     fn do_murmurhash2(py: Python, key: &[u8], seed: u32) -> u32 {
         py.allow_threads(|| murmurhash2_impl(key, seed))
