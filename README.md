@@ -19,8 +19,8 @@ from murmurhash2 import murmurhash2, murmurhash3
 
 
 SEED = 3242157231
-print(murmurhash2(b'key', SEED)
-print(murmurhash3(b'key', SEED)
+print(murmurhash2(b'key', SEED))
+print(murmurhash3(b'key', SEED))
 ```
 
 ## License
