@@ -3,7 +3,7 @@
 ![CI](https://github.com/messense/murmurhash2-py/workflows/MasterCI/badge.svg)
 [![PyPI](https://img.shields.io/pypi/v/murmurhash2.svg)](https://pypi.org/project/murmurhash2)
 
-murmurhash2 for Python
+32-bit murmurhash2 & 3 for Python
 
 ## Installation
 
@@ -15,11 +15,12 @@ pip install murmurhash2
 
 
 ```python
-from murmurhash2 import murmurhash2
+from murmurhash2 import murmurhash2, murmurhash3
 
 
 SEED = 3242157231
 print(murmurhash2(b'key', SEED)
+print(murmurhash3(b'key', SEED)
 ```
 
 ## License

@@ -2,7 +2,7 @@
 
 import pytest
 
-from murmurhash2 import murmurhash2
+from murmurhash2 import murmurhash2, murmurhash3
 
 
 SEED = 3242157231
@@ -22,3 +22,19 @@ SEED = 3242157231
 )
 def test_murmurhash2(key, expected):
     assert murmurhash2(key.encode("utf-8"), SEED) == expected
+
+
+@pytest.mark.parametrize(
+    "key, expected",
+    [
+        ("", 36859204),
+        ("a", 3144985375),
+        ("ab", 3262304301),
+        ("abc", 476091040),
+        ("abcd", 412992581),
+        ("abcde", 2747833956),
+        ("abcdefghijklmnop", 2078305053),
+    ],
+)
+def test_murmurhash3(key, expected):
+    assert murmurhash3(key.encode("utf-8"), SEED) == expected
