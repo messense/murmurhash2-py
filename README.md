@@ -1,6 +1,6 @@
 # murmurhash2-py
 
-![CI](https://github.com/messense/murmurhash2-py/workflows/MasterCI/badge.svg)
+![CI](https://github.com/messense/murmurhash2-py/workflows/CI/badge.svg)
 [![PyPI](https://img.shields.io/pypi/v/murmurhash2.svg)](https://pypi.org/project/murmurhash2)
 
 32-bit murmurhash2 & 3 for Python
