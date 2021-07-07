@@ -115,7 +115,8 @@ fn murmurhash2(_py: Python, m: &PyModule) -> PyResult<()> {
     /// Arguments
     /// key: data to be hashed
     /// seed: hash seed
-    #[pyfn(m, "murmurhash2")]
+    #[pyfn(m)]
+    #[pyo3(name = "murmurhash2")]
     fn do_murmurhash2(py: Python, key: &[u8], seed: u32) -> u32 {
         py.allow_threads(|| murmurhash2_impl(key, seed))
     }
@@ -125,7 +126,8 @@ fn murmurhash2(_py: Python, m: &PyModule) -> PyResult<()> {
     /// Arguments
     /// key: data to be hashed
     /// seed: hash seed
-    #[pyfn(m, "murmurhash3")]
+    #[pyfn(m)]
+    #[pyo3(name = "murmurhash3")]
     fn do_murmurhash3(py: Python, key: &[u8], seed: u32) -> u32 {
         py.allow_threads(|| murmurhash3_impl(key, seed))
     }
